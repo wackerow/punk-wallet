@@ -23,6 +23,7 @@ import {
   IFrame,
   QRPunkBlockie,
   Ramp,
+  ThemeSwitch,
   TransactionResponses,
   Wallet,
   WalletConnectTransactionPopUp,
@@ -872,6 +873,7 @@ function App(props) {
       <div className="site-page-header-ghost-wrapper">
         <Header
           extra={[
+            <ThemeSwitch />,
             <Address
               key="address"
               fontSize={32}
@@ -955,7 +957,7 @@ function App(props) {
       </div>
 
       {address && (
-        <div style={{ padding: 16, cursor: "pointer", backgroundColor: "#FFFFFF", width: 420, margin: "auto" }}>
+        <div style={{ padding: 16, cursor: "pointer", width: 420, margin: "auto" }}>
           <QRPunkBlockie withQr address={address} showAddress={true} />
         </div>
       )}
@@ -1225,7 +1227,7 @@ function App(props) {
       </BrowserRouter>
 */}
 
-      <div style={{ padding: 16, backgroundColor: "#FFFFFF", width: 420, margin: "auto" }}>
+      <div style={{ padding: 16, width: 420, margin: "auto" }}>
         <TransactionResponses
           provider={userProvider}
           signer={userProvider.getSigner()}
@@ -1376,17 +1378,7 @@ function App(props) {
       </div>
       <div style={{ padding: 32 }} />
 
-      <div
-        style={{
-          transform: "scale(2.7)",
-          transformOrigin: "70% 80%",
-          position: "fixed",
-          textAlign: "right",
-          right: 0,
-          bottom: 16,
-          padding: 10,
-        }}
-      >
+      <div className="camera-scanner">
         <Button
           type="primary"
           shape="circle"
