@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+.camera-scanner {
+  transform: scale(1.25);
+  position: fixed;
+  text-align: right;
+  right: 1rem;
+  bottom: 3rem;
+  padding: 1rem;
+  transition: transform 150ms ease-in;
+}
+
+.camera-scanner:hover {
+  transform: scale(1.5);
+  transition: transform 150ms ease-in;
+}

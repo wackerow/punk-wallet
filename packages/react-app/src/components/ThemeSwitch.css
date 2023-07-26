@@ -1,0 +1,20 @@
+button.color-toggle {
+  display: inline-grid;
+  place-items: center;
+  --size: 4rem;
+  position: fixed;
+  right: 6rem;
+  bottom: 3.5rem;
+  height: var(--size);
+  width: var(--size);
+  border: none;
+  background: none;
+  z-index: 1000;
+  border-radius: 100vw;
+  transition: transform 100ms ease-in;
+}
+button.color-toggle:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: transform 100ms ease-in;
+}
